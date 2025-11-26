@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1711">
+  <meta property="og:image:height" content="576">
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:url" content="" /> -->
+  <meta property="og:title" content="LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions" />
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/lightcity_icon.ico">
+  <link rel="apple-touch-icon" href="static/images/lightcity_icon.ico">
+  
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+  
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="title-group">
+          <i class="pixart-alpha-icon"></i>
+          <div class="macaron-text"><span>LightCity</span></div>
+          <span style="font-size: x-large;"> :</span>
+        </div>
+        <h2 class="project-subtitle">
+          An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions
+        </h2>
+        <div class="text-center">
+          <ul class="list-inline" style="white-space: nowrap; margin:0px 0px 0px 0px;" >
+              <li><a style="font-size: calc(min(4vw, 20px))" href="">Jingjing Wang<sup>1</sup></a>
+              <img src="static/images/star.png" class="author-star-icon" alt="Corresponding Author Star"></li>
+              <li><a style="font-size: calc(min(4vw, 20px))" href="">Qirui Hu<sup>1</sup></a>
+              <img src="static/images/star.png" class="author-star-icon" alt="Corresponding Author Star"></li>
+              <li><a style="font-size: calc(min(4vw, 20px))" href="https://chobao.github.io/">Chong Bao<sup>1</sup></a>
+              <img src="static/images/envelope.png" class="author-star-icon" alt="Corresponding Author Star"></li>
+              </li>
+              <li><a style="font-size: calc(min(4vw, 20px))" href="">Yuke Zhu<sup>1</sup></a><!--don't add a linebreak here! it adds a space!-->
+              </li>
+              <li><a style="font-size: calc(min(4vw, 20px))"  href="">Hujun Bao<sup>1</sup></a></a><!--don't add a linebreak here! it adds a space!-->
+              <li><a style="font-size: calc(min(4vw, 20px))"  href="https://zhpcui.github.io/">Zhaopeng Cui<sup>1</sup></a></a><!--don't add a linebreak here! it adds a space!-->
+              <li><a style="font-size: calc(min(4vw, 20px))" href="http://www.cad.zju.edu.cn/home/gfzhang/">Guofeng Zhang<sup>1</sup></a>
+              <img src="static/images/envelope.png" class="author-star-icon" alt="Corresponding Author Star"></li>
+          </ul>
+          <div class="col-md-12" style="font-size: calc(min(3vw, 16px))">
+            <sup>1</sup>State Key Lab of CAD & CG, Zhejiang University
+            </br>
+            <img src="static/images/star.png" class="author-star-icon" alt="Corresponding Author Star">Equal Contribution &nbsp;&nbsp;&nbsp;
+            <img src="static/images/envelope.png" class="author-star-icon" alt="Corresponding Author Star"> Corresponding Author
+            <div class="col-md-12 text-center" style="font-size: calc(min(6vw, 30px))">
+              <b>ICCV 2025</b>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center">
+                <span class="link-block" style="padding-top: 10px; padding-bottom: 10px">
+                    <a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_LightCity_An_Urban_Dataset_for_Outdoor_Inverse_Rendering_and_Reconstruction_ICCV_2025_paper.pdf" class="external-link button is-normal is-rounded is-dark"
+                        style="width: 100px; font-size: 15px">
+                        <span class="icon">
+                        <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>
+
+                        </span>
+                        <span>Paper</span>
+                    </a>
+                    <a href="https://arxiv.org/abs/" class="external-link button is-normal is-rounded is-dark"
+                        style="width: 100px; font-size: 15px">
+                        <span class="icon">
+                            <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                    </a>
+                    <a href="https://huggingface.co/datasets/whalejj/LightCity" class="external-link button is-normal is-rounded is-dark"
+                    style="width: 200px; font-size: 15px">
+                    <span class="icon">
+                    <svg class="svg-inline--fa fa-file-pdf" aria-hidden="true" version="1.1" viewBox="0 0 16 16" width="1.2em" ><path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+                    </span>
+                    <span> Dataset</span>
+                    </a>
+                </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+        <source src="static/videos/banner_video.mp4" type="video/mp4">
+      </video> -->
+      <div class="row">
+        <image src="static/images/teaser.png" class="img-responsive" alt="overview">
+      </div>
+      <div style="
+          background: linear-gradient(
+                90deg,
+                
+                #d7e6e1 0%, 
+                
+                #faefe7 30%, 
+                
+                #ffdcda 60%, 
+                
+                #e6eefd 100% 
+            );
+          padding: 15px;             /* Space inside the box */
+          border-radius: 5px;        /* Slightly rounded corners */
+          border: 1px solid #ddd;    /* Very light border */
+          margin-top: 10px;          /* Space above the box */
+      ">
+          <h6 style="color:rgb(0, 0, 0); margin: 0; font-weight: normal;">
+          <span style="font-weight: bold;">LightCity</span> is a novel high-quality 
+            <span style="font-weight: bold;">synthetic urban dataset</span>. 
+            It features complicated urban illumination conditions, including varied illumination, 
+            realistic <span style="font-weight: bold;">indirect lighting and shadow effects</span>, 
+            and varying scales with <span style="font-weight: bold;">street and aerial image capture</span>.
+          </h6>
+      </div>      
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-vcentered">
+            
+            <div class="column is-three-fifths">
+                <h2 class="title">Abstract</h2>
+                <div class="content">
+                    Inverse rendering in urban scenes is pivotal for applications like autonomous driving and digital twins. Yet, it faces significant challenges due to complex illumination conditions, including multi-illumination, indirect light and shadow effects.
+                    However, the effects of these challenges on intrinsic decomposition and 3D reconstruction have not been explored due to the lack of appropriate datasets. 
+                    We present LightCity, a novel high-quality synthetic urban dataset featuring diverse illumination conditions with realistic indirect light and shadow effects.
+                    LightCity encompasses over 300 sky maps with highly controllable illumination, varying scales with street-level and aerial perspectives over 50K images, and rich properties such as depth, normal, material components, light and indirect light, etc.
+                </div>
+                <h2 class="title" style="margin-top: 2rem;">Overview</h2>
+              <div class="content">
+                  <u1>&nbsp;&nbsp;&nbsp;&nbsp;LightCity has the following key features:</u1>
+                  <ul>
+                      <li>
+                          <strong>High quality:</strong> 
+                          LightCity is built upon Blender Cycle engine to deliver photo-realistic images with realistic lighting and shadow effects.
+                      </li>
+                      <li>
+                          <strong>Rich illumination diversity:</strong> 
+                          We incorporate over 300 sky maps spanning the entire day, from dawn to night, providing high controllability in illumination through adjustable rotation and intensity of HDRI maps.
+                      </li>
+                      <li>
+                          <strong>Scale:</strong> 
+                          The dataset encompasses synthetic urban blocks of varying scales, with over 30K views for intrinsic tasks and over 20K views for reconstruction tasks, covering both street-level and aerial perspectives.
+                      </li>
+                      <li>
+                          <strong>Comprehensive Properties:</strong> 
+                          The dataset includes multiple attributes that can support various vision tasks, such as depth and normal maps for geometry estimation, diffuse and glossy components for material estimation, etc.
+                      </li>
+                  </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div style="text-align: center;">
+                    <img src="static/images/framework.png" alt="pipeline" width="100%">
+                </div>
+                <p style="font-size: 0.9em; margin-top: 10px;">
+                    <strong>Fig. 1: Dataset Overview.</strong>
+                    The features of our urban datasets: (a) Diverse variety and flexible control of illuminations. (b) View sampling with varying scales. (c) Multiple properties.
+                </p>
+            </div>
+            
+        </div>
+        <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+            
+            <div class="column">
+                <h5 class="title is-5">Color</h5> <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/output_color.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="column">
+                <h5 class="title is-5">Intensity</h5> <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/output_intensity.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="column">
+                <h5 class="title is-5">Shading</h5> <video autoplay controls muted loop playsinline width="100%">
+                    <source src="static/videos/output_shading.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Benchmark -->
+<section class="section">
+   <div class="container is-max-desktop">
+        <h2 class="title">Benchmark</h2>
+        <div class="content">
+          We benchmark on three foundamental tasks: intrinsic image decomposition, multi-view inverse rendering and multi-illumination urban reconstruction.
+        </div>
+
+        <div class="content">
+            <h4 class="title is-4">&bull; Multi-illumination Reconstruction</h4>
+            
+            <div class="has-text-centered">
+                <img src="static/images/benchmark_recon.png" alt="benchmark reconstruction" width="80%">
+            </div>
+            
+            <div class="has-text-centered">
+                <p style="font-size: 0.9em; margin-top: 5px;">
+                    <strong>Tab. 1: Comparisons of novel view synthesis under multi-illumination in urban scenes.</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h4 class="title is-4">&bull; Intrinsic Image decomposition</h4>
+            
+            <div class="has-text-centered">
+                <img src="static/images/benchmark_iid.png" alt="benchmark reconstruction" width="80%">
+            </div>
+        </div>
+
+        <div class="content">
+            <h4 class="title is-4">&bull; Multi-view Inverse Rendering</h4>
+            <div class="columns is-centered is-vcentered">
+                <div class="column">
+                  <img src="static/images/benchmark_inverse.png" alt="benchmark inverse rendering" width="80%">
+                </div>
+                <div class="column">
+                  <img src="static/images/inverse_compare.png" alt="inverse rendering quality" width="90%">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- Benchmark -->
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@inproceedings{wang2025lightcity,
+  title={LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction under Multi-illumination Conditions},
+  author={Jingjing Wang, Qirui Hu, Chong Bao, Yuke Zhu, Hujun Bao, Zhaopeng Cui, Guofeng Zhang},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2025},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
