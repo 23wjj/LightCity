@@ -1,6 +1,6 @@
 # LightCity: An Urban Dataset for Outdoor Inverse Rendering and Reconstruction
 
-### [Project Page](https://23wjj.github.io/LightCity/) | [Paper](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_LightCity_An_Urban_Dataset_for_Outdoor_Inverse_Rendering_and_Reconstruction_ICCV_2025_paper.pdf)
+### [Project Page](https://23wjj.github.io/LightCity/) | [Paper](https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_LightCity_An_Urban_Dataset_for_Outdoor_Inverse_Rendering_and_Reconstruction_ICCV_2025_paper.pdf) | [Dataset](https://huggingface.co/datasets/whalejj/LightCity)
 <div align=center>
 <img src="static/images/teaser.png" width="100%"/>
 </div>
